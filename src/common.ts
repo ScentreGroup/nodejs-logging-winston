@@ -213,8 +213,12 @@ export class LoggingCommon {
       data.serviceContext = this.serviceContext;
     }
 
-    data.message = this.prefix ? `[${this.prefix}] ` : '';
-    data.message += message;
+    if (typeof message === 'object') {
+      data.message = message;
+    } else {
+      data.message = this.prefix ? `[${this.prefix}] ` : '';
+      data.message += message;
+    }
 
     const entryMetadata: LogEntry = {
       resource: this.resource,
