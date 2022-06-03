@@ -1,7 +1,7 @@
 {
   "name": "@scentregroup/logging-winston",
   "description": "Stackdriver Logging transport for Winston",
-  "version": "5.1.5",
+  "version": "5.1.6",
   "license": "Apache-2.0",
   "author": "Google Inc.",
   "engines": {
